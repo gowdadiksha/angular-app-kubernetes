@@ -5,14 +5,14 @@
     azureContainerRegistry: '{"loginServer":"dcontreg1.azurecr.io", "id" : "/subscriptions/ff193f93-cf1f-4102-837e-097d881c89fa/resourceGroups/spotinstance/providers/Microsoft.ContainerRegistry/registries/dcontreg1"}'
     dockerComposeFile: '**/docker-compose.yml'
     action: 'Build services'
-# Build and push an image to Azure Container Registry
+ # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- master
+  - master
 
 resources:
-- repo: self
+  - repo: self
 
 variables:
   # Container registry service connection established during pipeline creation
